@@ -24,7 +24,7 @@ public class TestTask {
         System.out.printf("Количество сгенерированных фигур: %d\n", count);
         while(count > 0){
             String ranColor = colors[randomInt(0, colors.length - 1)];
-            int figure = randomInt(0, AvailableFigures.values().length - 1);
+            int figure = randomInt(0, AvailableFigures.values().length);
             //Случайным образом генерируем одну из доступных фигур
             switch(figure){
                 case 0:
