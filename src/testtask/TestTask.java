@@ -64,7 +64,7 @@ public class TestTask {
         int a, b, c;
         a = randomInt(5, 50);
         b = randomInt(10, 50);
-        c = randomInt(Math.abs(a - b), a + b);
+        c = randomInt(Math.abs(a - b) + 1, Math.max(a, b));
         return new Triangle(a, b, c, color);
     }
     public static Trapezium createTrapezium(String color){

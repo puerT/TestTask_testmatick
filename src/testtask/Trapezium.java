@@ -23,15 +23,15 @@ public class Trapezium extends Figure{
     Возвражает параметры: верхняя сторона, нижняя, левая, правая, высота
     */
     public double[] getSidesLength(){
-        return new double[]{a, b, (h/Math.sin(alpha)), (h/Math.sin(beta)), h};
+        return new double[]{a, b, Math.abs(h/Math.sin(alpha)), Math.abs(h/Math.sin(beta)), h};
     }
     
     public double getSideLength(String side){
         switch(side){
             case "top": return a;
             case "bottom": return b;
-            case "left": return h/Math.sin(alpha);
-            case "right": return h/Math.sin(beta);
+            case "left": return Math.abs(h/Math.sin(alpha));
+            case "right": return Math.abs(h/Math.sin(beta));
             default: return 0;
         }
     }
